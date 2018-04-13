@@ -1,0 +1,5 @@
+<!--pages/sign/sign.wxml-->
+<view>
+  <text>打卡页</text>
+  <view> {{ curDate }} </view>
+</view>

@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/sign/sign",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/components/components",
+    "pages/search/search"
+  ],
+  "window":{
+    "navigationStyle":"default",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#00bdff",
+    "navigationBarTitleText": "自由派Free Pai",
+    "navigationBarTextStyle":"#ffffff",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "color":"#818181",
+    "selectedColor":"#515151",
+    "position":"bottom",
+    "list":[
+      {
+        "pagePath": "pages/sign/sign",
+        "text": "打卡",
+        "iconPath": "images/position.png",
+        "selectedIconPath": "images/positionSelect.png"
+      },
+      {
+        "pagePath": "pages/components/components",
+        "text": "请假",
+        "iconPath": "images/leave.png",
+        "selectedIconPath": "images/leaveSelect.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/meSelect.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+/* pages/search/search.wxss */
+.searchCon {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.searchCon input {
+  padding: 5rpx 20rpx;
+  width: 80%;
+  color: #666666;
+  font-size: 30rpx;
+  border: 4rpx solid #aaa;
+  border-radius: 10rpx;
+}
+.placeHolder {
+  font-size: 30rpx;
+  color: #999999;
+}

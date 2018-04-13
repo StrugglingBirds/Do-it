@@ -1,0 +1,11 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+  <view class='searchCon'>
+    <input bindconfirm="searchFun" type='text' confirm-type='search' focus='true' placeholder='搜索' placeholder-class='placeHolder' />
+  </view>
+  <view class='searchHistory'>
+    <block wx:for="{{searchHistory}}" wx:key="{{index}}">
+      <navigator url="{{item.url}}">{{item.msg}}</navigator>
+    </block>
+  </view>
+</view>
