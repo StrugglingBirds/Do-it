@@ -1,1 +1,30 @@
 /* pages/sign/sign.wxss */
+.userinfo {
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.signInfo {
+  padding-top: 40rpx;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.userinfo-nickname {
+  color: #666;
+}
+.signtext {
+  margin-top: 10rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+}

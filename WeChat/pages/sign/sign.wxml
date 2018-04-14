@@ -1,5 +1,22 @@
 <!--pages/sign/sign.wxml-->
 <view>
-  <text>打卡页</text>
-  <view> {{ curDate }} </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="signInfo">
+        <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+        <view wx:if="{{!signin}}" class="unsign" class="signtext">您今天还未签到！</view>
+        <view wx:elif="{{signin && !signout}}" class="signtext">今日您已完成签到<text>1</text>次</view>
+        <view wx:elif="{{signin && signout}}" class="signtext">今日您已经完成签出<text>{{}}</text>次</view>
+      </view>
+    </block>
+  </view>
+  <view class="date">
+    <view class="curdate">
+      <text>{{curDateWeek}}</text>
+      <text>{{ curDate }}</text>
+    </view>
+    <view>当前时间:{{curDateTime}}</view>
+  </view>
 </view>

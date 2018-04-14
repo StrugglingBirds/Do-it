@@ -10,6 +10,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res)
       }
     })
     // 获取用户信息
@@ -35,6 +36,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    vieoKey: '3f5b810cbc8592915cc489a21a1cc3de'
+    vieoKey: '3f5b810cbc8592915cc489a21a1cc3de',
+    weeks: ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
   }
 })
