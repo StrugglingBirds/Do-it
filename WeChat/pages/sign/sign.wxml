@@ -14,9 +14,20 @@
   </view>
   <view class="date">
     <view class="curdate">
-      <text>{{curDateWeek}}</text>
-      <text>{{ curDate }}</text>
+      <text class="_week">{{curDateWeek}}</text>
+      <text class="_date">{{ curDate }}</text>
     </view>
-    <view>当前时间:{{curDateTime}}</view>
+    <view class="curtime">当前时间:{{curDateTime}}</view>
   </view>
+  <view class="address">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location></map>
+    <view class="addrMsg">
+      <view>{{markers[0].address}}</view>
+      <view>{{markers[0].desc}}</view>
+    </view>
+  </view>
+  <button class="sign" hover-class="signHover" bindtap="sign">
+    <view class="btnimg"><image src="../../../images/btnpos.png"></image></view>
+    <text>签到</text>
+  </button>
 </view>

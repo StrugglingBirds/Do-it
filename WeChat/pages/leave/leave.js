@@ -5,8 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tap: '',
-    result: {}
+    leaveType: ["事假","病假","年假","婚假","产假","丧假","调休"],
+    index: 0,
+    startDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
+    _startDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
+    endDate: "",
+    _endDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
   },
 
   /**
@@ -114,6 +118,21 @@ Page({
       success: function (res) {
         console.log(res.data)
       }
+    })
+  },
+  bindPickerChange (e) {
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  bindSDateChange (e) {
+    this.setData({
+      _startDate: e.detail.value
+    })
+  },
+  bindEDateChange(e) {
+    this.setData({
+      _endDate: e.detail.value
     })
   }
 })

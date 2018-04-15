@@ -1,5 +1,0 @@
-/* home.wxss */
-.nav {
-  display:flex;
-  justify-content: space-around;
-}

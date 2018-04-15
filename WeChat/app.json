@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/sign/sign",
-    "pages/home/home",
+    "pages/leave/leave",
     "pages/index/index",
     "pages/logs/logs",
     "pages/components/components",
@@ -27,7 +27,7 @@
         "selectedIconPath": "images/positionSelect.png"
       },
       {
-        "pagePath": "pages/components/components",
+        "pagePath": "pages/leave/leave",
         "text": "请假",
         "iconPath": "images/leave.png",
         "selectedIconPath": "images/leaveSelect.png"

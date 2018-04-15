@@ -1,0 +1,46 @@
+<!-- home.wxml -->
+<view>
+  <view class="form">
+    <view class="list_item">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{leaveType}}">
+        <view class="picker">
+          <text>请假类型</text>
+          <view>
+            {{leaveType[index]}}
+            <image class="btn_right" src="../../images/btn_right.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="list_item">
+      <picker mode="date" bindchange="bindSDateChange" value="{{_startDate}}" start="{{startDate}}">
+        <view class="picker">
+          <text>开始时间</text>
+          <view>
+            {{_startDate}}
+            <image class="btn_right" src="../../images/btn_right.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="list_item">
+      <picker mode="date" bindchange="bindEDateChange" value="{{_endDate}}" start="{{startDate}}">
+        <view class="picker">
+          <text>结束时间</text>
+          <view>
+            {{_endDate}}
+            <image class="btn_right" src="../../images/btn_right.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="list_item">
+      <view class="picker">
+        <text>时长(天）</text>
+        <view>
+          <input type="number" placeholder="请输入时长（必填）"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
