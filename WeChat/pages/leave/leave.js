@@ -11,6 +11,7 @@ Page({
     _startDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
     endDate: "",
     _endDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
+    uploadPics: []
   },
 
   /**
@@ -133,6 +134,18 @@ Page({
   bindEDateChange(e) {
     this.setData({
       _endDate: e.detail.value
+    })
+  },
+  getPic () {
+    var _this = this;
+    wx.chooseImage({
+      count: 6,
+      success (res) {
+        console.log(res)
+        _this.setData({
+          uploadPics: res.tempFilePaths
+        })
+      }
     })
   }
 })

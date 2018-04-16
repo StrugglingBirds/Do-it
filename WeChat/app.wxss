@@ -14,6 +14,9 @@
 .dis_block_im {
   display: block !important;
 }
+.dis_flex {
+  display: flex;
+}
 .rtl {
    direction: ltr; 
   text-align: right;
@@ -26,4 +29,7 @@
 }
 .f_justify_start {
   justify-content: flex-start;
+}
+.f_justify_between {
+  justify-content: space-between;
 }

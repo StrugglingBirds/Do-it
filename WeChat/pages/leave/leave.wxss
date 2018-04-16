@@ -12,16 +12,6 @@
   background: #fff;
   border-bottom: 1rpx solid #eee;
 }
-.list_item button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background: #fff;
-  width: 50%;
-  height: 100%;
-  border: none;
-  margin: 0;
-}
 .list_item picker {
   width: 100%;
 }
@@ -40,4 +30,50 @@
 .list_item image.btn_right {
   width: 40rpx;
   height: 40rpx;
+}
+.text_place {
+  font-size: 30rpx;
+  color: #999;
+}
+.reason {
+  box-sizing: border-box;
+  width: 94%;
+  margin: 20rpx auto;
+  padding: 10rpx 20rpx;
+  border: 1rpx dashed #eee;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #666;
+  background: #efefef;
+}
+.list_item .picker.uploadpic {
+  width: 100%;
+  border: none !important;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.uploadpic image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.pictures {
+  background: #fff;
+}
+.picitem {
+  display: flex;
+  width: 100%;
+  padding: 50rpx 20rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.picitem image {
+  width: 100rpx;
+  height: 50rpx;
+}
+.picitem button {
+  margin: 0;
 }

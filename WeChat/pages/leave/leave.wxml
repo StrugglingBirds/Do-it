@@ -47,7 +47,19 @@
         <text>请假原因</text>
       </view>
       <view>
-        <textarea placeholder="请输入您的请假原因"></textarea>
+        <textarea class="reason" placeholder-class='text_place' placeholder="请填入请假事由--必填"></textarea>
+      </view>
+    </view>
+    <view class="list_item">
+      <view class="picker uploadpic" bindtap="getPic">
+        <text>图片</text>
+        <image src="../../images/camera.png"></image>
+      </view>
+    </view>
+    <view class="pictures" wx:if="{{uploadPics.length}}">
+      <view class="picitem" wx:for="{{uploadPics}}">
+        <image src="{{item}}"></image>
+        <button>删除</button>
       </view>
     </view>
   </view>
