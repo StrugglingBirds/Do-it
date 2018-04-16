@@ -35,11 +35,19 @@
       </picker>
     </view>
     <view class="list_item">
-      <view class="picker">
+      <view class="picker wid_full">
         <text>时长(天）</text>
-        <view>
-          <input type="number" placeholder="请输入时长（必填）"/>
+        <view class="days">
+          <input class="rtl" placeholder-class='rtl' type="number" placeholder="请输入时长--必填"/>
         </view>
+      </view>
+    </view>
+    <view class='list_item dis_block_im'>
+      <view class="picker">
+        <text>请假原因</text>
+      </view>
+      <view>
+        <textarea placeholder="请输入您的请假原因"></textarea>
       </view>
     </view>
   </view>

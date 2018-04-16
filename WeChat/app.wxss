@@ -7,4 +7,23 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+.wid_full {
+  width: 100%;
+}
+.dis_block_im {
+  display: block !important;
+}
+.rtl {
+   direction: ltr; 
+  text-align: right;
+}
+.days input {
+  padding-right: 40rpx;
+}
+.f_dir_c {
+  flex-direction: column;
+}
+.f_justify_start {
+  justify-content: flex-start;
+}
