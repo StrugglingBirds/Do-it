@@ -11,7 +11,8 @@ Page({
     _startDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
     endDate: "",
     _endDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate(),
-    uploadPics: []
+    uploadPics: [],
+    isShowBigImg: false
   },
 
   /**
@@ -136,15 +137,61 @@ Page({
       _endDate: e.detail.value
     })
   },
+
+  /**上传图片及回显 */
   getPic () {
     var _this = this;
+    var uploadCount = 6;
     wx.chooseImage({
-      count: 6,
+      count: uploadCount,
       success (res) {
-        console.log(res)
+        var paths = _this.data.uploadPics.concat(res.tempFilePaths);
+        paths = paths.splice(paths.length - uploadCount, uploadCount);
         _this.setData({
-          uploadPics: res.tempFilePaths
+          uploadPics: paths
         })
+      }
+    })
+  },
+
+  /**删除上传的图片 */
+  deletePic (e) {
+    var _this = this;
+    var nth = e.target.dataset.tip;
+    wx.showModal({
+      title: "提示",
+      content: "您确认要删除此上传的图片吗？",
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          var dealData = _this.data.uploadPics.splice(nth, 1);
+          _this.setData({
+            uploadPics: _this.data.uploadPics
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      },
+      fail: function () {
+        console.log('删除失败')
+      }
+    })
+  },
+
+  /**预览图片 */
+  imgPreview (e) {
+    wx.previewImage({
+      current: '',
+      urls: [e.target.dataset.src]
+    })
+  },
+
+  /**文件的保存 */
+  fileSave () {
+    wx.saveFile({
+      tempFilePath: '',
+      success (res) {
+        
       }
     })
   }

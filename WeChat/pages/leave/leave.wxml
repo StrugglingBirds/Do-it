@@ -57,9 +57,9 @@
       </view>
     </view>
     <view class="pictures" wx:if="{{uploadPics.length}}">
-      <view class="picitem" wx:for="{{uploadPics}}">
-        <image src="{{item}}"></image>
-        <button>删除</button>
+      <view class="picitem {{index === uploadPics.length-1?'picitem_last':''}}" wx:key="index" wx:for="{{uploadPics}}">
+        <image data-tip="{{index}}" data-src="{{item}}" bindtap="imgPreview" src="{{item}}"></image>
+        <button data-tip="{{index}}" bindtap='deletePic'>删除</button>
       </view>
     </view>
   </view>
