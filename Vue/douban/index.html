@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+    <title>douban</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    $(function () {
+      var host   = 'https://m.douban.com';
+      var api    = host + '/rexxar/api/v2/subject_collection/movie_showing/items?os=ios&for_mobile=1&callback=?';
+      $.getJSON(api, {start: 0, count: 18, loc_id: '108288'}, function(data){
+        console.log(data)
+        // if (start === 0) {
+        //   render_header(data.subject_collection);
+        //
+        //   if (!data.subject_collection_items.length) {
+        //     $list.append('<h3 class="empty">暂时没有内容</h3>');
+        //     return false;
+        //   }
+        // }
+
+        // if (data.subject_collection_items.length) {
+        //   START += COUNT;
+        //
+        //   $list.append(itemTmpl(data));
+        //
+        //   $('#list img').on('load', function(){
+        //     if (layout === 'grid') {
+        //       adjustImg($(this));
+        //     }
+        //     $(this).addClass('img-show');
+        //   });
+        // }
+        //
+        // setTimeout(function(){
+        //   timer = true;
+        // }, 1000);
+      });
+    })
+  </script>
+</html>
