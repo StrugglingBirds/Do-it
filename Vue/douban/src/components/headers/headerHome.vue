@@ -9,12 +9,13 @@
           <router-link :to="navItem.path" :style="navItem.style">{{navItem.text}}</router-link>
         </li>
       </ul>
-      <span class="search"></span>
+      <span class="search" @click="search"></span>
     </div>
   </div>
 </template>
 
 <script>
+import Event from './Event'
 export default {
   name: 'header-home',
   data () {
@@ -41,6 +42,12 @@ export default {
           style: 'color: #2AB8CC'
         }
       ]
+    }
+  },
+  methods: {
+    search () {
+      Event.$emit('hasHeader', false)
+      this.$router.push('/search')
     }
   }
 }
