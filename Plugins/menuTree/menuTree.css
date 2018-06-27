@@ -33,3 +33,8 @@ a:not([href]) {
 	opacity: 1;
 	display: block;
 }
+#menuTree .nowrap {
+	white-space: nowrap;
+	word-wrap: nowrap;
+	word-break: nowrap;
+}

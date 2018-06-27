@@ -69,6 +69,8 @@ menuTree.prototype.createEle = function (menuObj) {
 	var img = document.createElement('img');
 	var span = document.createElement('span');
 
+	a.className = "nowrap";
+	span.className = "nowrap";
 	branch.className = "branch";
 	img.src = menuObj.menuIcon;
 	span.innerText = menuObj.menuText;
